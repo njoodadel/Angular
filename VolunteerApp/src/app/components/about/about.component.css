@@ -1,7 +1,17 @@
 #section1{
-    background-color: #512B58;
+    background-color: #17223B;
+    align-items: center;
+    text-align: center;
+
 }
 
 #section2{
-    background-color: #17223B;
+    background-color: #512B58;
+}
+.h2{
+    color: #FE346E;
+}
+
+.col{
+    text-align: center;
 }

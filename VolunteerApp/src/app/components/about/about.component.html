@@ -1,9 +1,16 @@
-<div fullpage id="fullpage2" [options]="config" (ref)="getRef($event)">
+<div fullpage id="fullpage2" [options]="options" (ref)="getRef($event)">
     <div id="section1" class="section">
-        <h1>Section 1</h1>
+        <img src="../../../assets/images/logo.png" [width]="LogoImageSize" alt="" />
     </div>
     <div id="section2" class="section">
-        <h1>Section 2</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="h2 pb-4">Get Volunteer App!</h2>
+                    <img [src]="DownloadImagePath" [width]="DownloadImageSize" alt="" />
+                </div>
+            </div>
+        </div>
     </div>
 
 

@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular/animations": "~10.0.4",
     "@angular/common": "~10.0.4",
     "@angular/compiler": "~10.0.4",
@@ -23,7 +24,9 @@
     "@fullpage/angular-fullpage": "0.0.14",
     "bootstrap": "^4.5.0",
     "firebase": "^7.16.1",
+    "jquery": "^3.5.1",
     "rxjs": "~6.5.5",
+    "save": "^2.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

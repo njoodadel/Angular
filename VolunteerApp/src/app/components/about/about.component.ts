@@ -6,17 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  config: any;
+  options: any;
   fullpage_api: any;
-  constructor() {  // for more details on config options please visit fullPage.js docs
-    this.config = {
+  innerWidth: any;
+  innerHeight: any;
+  DownloadImagePath: String;
+  DownloadImageSize: number;
+  LogoImageSize: number;
 
-      // fullpage options
+
+
+  constructor() {
+
+    this.options = {
       licenseKey: 'YOUR LICENSE KEY HERE',
-      // anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-      // menu: '#menu',
+      navigation: true,
 
-      // fullpage callbacks
       afterResize: () => {
         console.log("After resize");
       },
@@ -27,6 +32,23 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
+    if (this.innerWidth >= 1100) {
+      this.DownloadImagePath = "../../../assets/images/downloadLarge.png";
+      this.DownloadImageSize = this.innerWidth / 2.5;
+      this.LogoImageSize = this.innerWidth / 2.5;
+    }
+    else {
+      if (this.innerWidth < 1100) {
+        this.DownloadImagePath = "../../../assets/images/downloadSmall.png";
+        this.DownloadImageSize = this.innerWidth / 2;
+        this.LogoImageSize = this.innerWidth / 1.5;
+
+      }
+
+    }
+
   }
 
   getRef(fullPageRef) {
